@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[notes]{biblatex-chicago}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{minted}
+\usepackage{fontspec}
+\usepackage{esint}
+
+\addbibresource{references.bib}
+
+\setmonofont{Consolas}
+
+\title{LONG TITLE HERE}
+\author{Ian Lisien}
+\date{DUE DATE HERE}
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{SHORT TITLE HERE} 
+\fancyhead[R]{Lisien}                     
+
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\noindline}{\hspace*{-\leftmargini}\noindent\rule{\textwidth}{0.4pt}}
+\newcommand{\fullbarline}{\noindent\rule{\textwidth}{0.4pt}}
+
+\begin{document}
+
+\maketitle
+
+\fullbarline
+
+
+\printbibliography
+\end{document}

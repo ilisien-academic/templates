@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage[backend=biber,style=mla]{biblatex}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{indentfirst}
+
+\setmainfont{STIX Two Text}
+
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \fancyhead[R]{Ian Lisien}
+  %\fancyhead[R]{21 October 2025}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[R]{Lisien \thepage}                     
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\renewbibmacro*{finentry}{%
+  \setunit{\finentrypunct\par}%
+  \printfield{annotation}%
+  \finentry}
+
+\setlength\bibitemsep{1.0\baselineskip}
+
+\addbibresource{references.bib}
+    
+
+\newcommand{\mlasection}[1]{%
+  \par\vspace{1em}% space before
+  {\normalfont\normalsize\bfseries\raggedright #1\par}%
+  \vspace{0.5em}% space after
+}
+
+\begin{document}
+\setstretch{2.0}
+\setlength{\parindent}{0.5in}
+\thispagestyle{firstpage}
+\noindent\begin{center}
+    \textbf{LONG TITLE HERE}
+\end{center}
+
+
+
+\newpage
+\begin{singlespace}
+\begin{center}
+    \textbf{Works Cited}
+\end{center}
+\printbibliography[heading=none]
+\end{singlespace}
+\end{document}
