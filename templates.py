@@ -14,8 +14,8 @@ LOCAL_CONFIG = {
 }
 
 def yn(prompt,default):
-    d = default
-    
+    y = "Y" if default else 
+
     response = input(prompt + f"[{}/{}]")
     
 
