@@ -68,5 +68,5 @@ def local_git_repo_and_push(course_code,repo_name,semester=LOCAL_CONFIG['current
     base_path = Path(LOCAL_CONFIG['academic_root']) / semester / course_code
     if not base_path.exists():
         if yn(f"Base path: '{str(base_path)}' doesn't exist; create it?",False):
-            base
+            base_path.mkdir(parents=True,exist_ok=True)
 
