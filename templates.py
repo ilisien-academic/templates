@@ -69,7 +69,8 @@ def setup_template_only_gitignore(repo_path):
     shutil.copytree("templates\\only_gitignore",repo_path)
 
 def setup_template_technical_written_hw(repo_path):
-    shutil.copytree("templates\\technical_written_hw")
+    shutil.copytree("templates\\technical_written_hw",repo_path)
+    
 
 def setup_template_mla_essay(repo_path):
     pass
