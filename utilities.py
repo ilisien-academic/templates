@@ -22,8 +22,8 @@ def yn(prompt,d_yes=True):
     response = input(prompt + f" [{y}/{n}]").strip().lower()
     yes = (response in ["y","yes"]) or (d_yes and (response == ""))
 
-    if d_yes and yes:
-        return d_yes and yes
+    if yes:
+        return yes
     else:
         no = (response in ["n","no"]) or (not d_yes and (response == ""))
         if 
