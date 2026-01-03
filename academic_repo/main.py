@@ -2,6 +2,8 @@ import os, shutil, subprocess, json, sys, re
 from pathlib import Path
 from utilities import *
 
+PACKAGE_DIR = Path(__file__).parent
+
 GH_CONFIG = {
     'gh_username':'ilisien-academic',
     'gh_email':'irl5102@psu.edu',
