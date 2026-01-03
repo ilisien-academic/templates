@@ -92,3 +92,7 @@ def local_git_repo_and_push(course_code,repo_name,template=setup_template_only_g
         repo_path.mkdir(parents=True,exist_ok=False)
     
     template(repo_path)
+
+    subprocess.run(['git', 'init'], check=True)
+    subprocess.run(['git', 'add', '.'], check=True)
+    subprocess.run(['git', 'commit', '-m', 'Initial commit'], check=True)
