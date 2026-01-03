@@ -55,7 +55,7 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
 
     repo_prefix = course_code.replace("_","") + "_" + assignment_type.replace(" ","_") + "_"
 
-    return repo_prefix + sequential_numbered_repo_number(repo_prefix)
+    return repo_prefix + str(sequential_numbered_repo_number(repo_prefix))
 
 BASE_CONFIG = {
     'gh_username':'ilisien-academic',
