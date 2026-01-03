@@ -1,0 +1,28 @@
+{
+  "fa25": {
+    "courses": {
+      "la": "la_197",
+      "phys": "phys_211h",
+      "rcl": "cas_137h",
+      "econ": "econ_104",
+      "be": "be_100",
+      "soils": "soils_101",
+      "math": "math_230h"
+    },
+    "assignment_types": [
+      "whw",
+      "apple"
+    ]
+  },
+  "sp26": {
+    "courses": {
+      "phys": "phys_212h",
+      "math": "math_251h",
+      "rcl": "engl_138t",
+      "edsgn": "edsgn_100",
+      "bmb": "bmb_251h",
+      "hort": "hort_101"
+    },
+    "assignment_types": []
+  }
+}
