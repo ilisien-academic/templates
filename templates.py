@@ -105,4 +105,6 @@ def local_git_repo_and_push(course_code,repo_name,template='empty',semester=LOCA
     subprocess.run(['git', 'push', '-u', 'origin', 'main'], cwd=repo_path, check=True)
 
 if __name__ == "__main__":
-    repo_name = fa25_academic_naming()
+    course_code, repo_name = fa25_academic_naming('math','whw','fa25')
+    create_gh_repo(repo_name)
+    local_git_repo_and_push(course_code, repo_name, semester='fa25')
