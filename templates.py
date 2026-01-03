@@ -19,7 +19,7 @@ def get_all_gh_repos():
 
 def sequential_numbered_repo_number(prefix):
     repos = get_all_gh_repos()
-    repos_w_prefix = [repo for repo in repos if prefix in repo]
+    repos_w_prefix = [repo.split("_")[-1] for repo in repos if prefix in repo]
     for repo in all_repos:
         if prefix 
 
