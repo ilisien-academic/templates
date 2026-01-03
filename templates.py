@@ -4,6 +4,7 @@ from utilities import *
 
 GH_CONFIG = {
     'gh_username':'ilisien-academic',
+    'gh_email':'irl5102@psu.edu',
     'gh_key_name':'github.com-academic',
     'default_gh_repo_visibility':'--private',
 }
@@ -93,6 +94,8 @@ def local_git_repo_and_push(course_code,repo_name,template=setup_template_only_g
     
     template(repo_path)
 
+    subprocess.run(['git', 'config', 'user.name', GH_CONFIG['gh_username']], cwd=repo_path, check=True)
+    subprocess.run(['git', 'config', 'user.email', GH_CONFIG['gh_email']], cwd=repo_path, check=True)
     subprocess.run(['git', 'init'], cwd=repo_path, check=True)
     subprocess.run(['git', 'add', '.'], cwd=repo_path, check=True)
     subprocess.run(['git', 'commit', '-m', 'init'], cwd=repo_path, check=True)
