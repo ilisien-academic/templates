@@ -60,6 +60,5 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
 
     return repo_prefix + str(sequential_numbered_repo_number(repo_prefix))
 
-
 def create_gh_repo():
     pass
