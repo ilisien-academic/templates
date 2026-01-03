@@ -72,7 +72,8 @@ def setup_template_technical_written_hw(repo_path):
     JULIA_PACKAGES = ['CairoMakie','DifferentialEquations','Symbolics']
 
     shutil.copytree("templates\\technical_written_hw",repo_path)
-    subprocess.run(['python','-m','venv','env'])
+    subprocess.run(['python','-m','venv','env'],cwd=repo_path / 'code', check=True)
+    
 
 
 def setup_template_mla_essay(repo_path):
