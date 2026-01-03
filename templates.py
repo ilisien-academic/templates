@@ -64,9 +64,20 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
 def create_gh_repo(repo_name,visibility=GH_CONFIG['default_gh_repo_visibility']):
     return subprocess.run(['gh','repo','new',repo_name,visibility],check=True)
 
-def setup_template_only_gitignore(repo_path)
+def setup_template_only_gitignore(repo_path):
+    shutil.copytree("only_gitignore")
 
-def local_git_repo_and_push(course_code,repo_name,template="only_gitignore",semester=LOCAL_CONFIG['current_semester']):
+def setup_template_technical_written_hw(repo_path):
+    pass
+
+def setup_template_mla_essay(repo_path):
+    pass
+
+TEMPLATE_LIBRARY = {
+
+}
+
+def local_git_repo_and_push(course_code,repo_name,template=setup_template_only_gitignore,semester=LOCAL_CONFIG['current_semester']):
     base_path = Path(LOCAL_CONFIG['academic_root']) / semester / course_code
     if not base_path.exists():
         if yn(f"Base path: '{str(base_path)}' doesn't exist; create it?",False):
