@@ -67,4 +67,6 @@ def create_gh_repo(repo_name,visibility=GH_CONFIG['default_gh_repo_visibility'])
 def local_git_repo_and_push(course_code,repo_name,semester=LOCAL_CONFIG['current_semester']):
     base_path = Path(LOCAL_CONFIG['academic_root']) / semester / course_code
     if not base_path.exists():
-        
+        if yn(f"Base path: '{str(base_path)}' doesn't exist; create it?",False):
+            base
+
