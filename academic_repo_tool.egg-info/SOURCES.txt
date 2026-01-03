@@ -1,7 +1,0 @@
-setup.py
-templates.py
-academic_repo_tool.egg-info/PKG-INFO
-academic_repo_tool.egg-info/SOURCES.txt
-academic_repo_tool.egg-info/dependency_links.txt
-academic_repo_tool.egg-info/entry_points.txt
-academic_repo_tool.egg-info/top_level.txt
