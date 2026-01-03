@@ -75,6 +75,7 @@ def setup_template_technical_written_hw(repo_path):
     subprocess.run(['python','-m','venv','env'],cwd=repo_path / 'code', check=True)
     julia_code = f'using Pkg; Pkg.activate("."); Pkg.add({str(JULIA_PACKAGES).replace("'",'"')})' #; Pkg.precompile()
     subprocess.run(['julia','--project=.','-e',julia_code], cwd=repo_path / 'code', check=True)
+    repo_path / f'{repo_path.name}.tex'
     (repo_path / 'REPO_NAME_HERE.tex').rename(repo_path / f'{repo_path.name}.tex')
 
     long_title = input("What should I title the .tex document? (title): ")
@@ -93,7 +94,9 @@ def setup_template_technical_written_hw(repo_path):
         tex_content = f.read()
 
     for placeholder, value in replacements.items():
-        tex
+        tex_content = tex_content.replace(placeholder,value)
+    
+    with open()
 
 def setup_template_mla_essay(repo_path):
     pass
