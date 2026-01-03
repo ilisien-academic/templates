@@ -15,7 +15,7 @@ BASE_CONFIG = {
     'gh_username':'ilisien-academic',
     'gh_key_name':'github.com-academic',
     'default_gh_repo_visibility':'private',
-    'repo_naming_standard': fa25_academic_naming,
+    'naming_standard': fa25_academic_naming,
 }
 
 def create_gh_repo()
