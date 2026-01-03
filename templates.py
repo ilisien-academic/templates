@@ -83,7 +83,9 @@ def setup_template_technical_written_hw(repo_path):
         short_title = long_title
     due_date = input("When is this assignment due? (due date): ")
 
-    with open(repo_path / f'{repo_path.name}.tex')
+    with open(repo_path / f'{repo_path.name}.tex', "r", encoding="utf-8") as f:
+        tex_content = f.read()
+    for 
 
 def setup_template_mla_essay(repo_path):
     pass
