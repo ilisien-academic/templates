@@ -17,6 +17,8 @@ def get_all_gh_repos():
     repo_list = subprocess.run(['gh','repo','list'])
     return re.findall(rf'{GH_CONFIG['gh_username']}/(.*?)\\t',str(repo_list.stdout))
 
+def starting_number()
+
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
     Naming in the format: "abc123_assignment_type_1"
