@@ -13,6 +13,9 @@ LOCAL_CONFIG = {
     'current_semester':'sp26'
 }
 
+def log_in():
+    
+
 def get_all_gh_repos():
     repo_list = subprocess.run(['gh','repo','list','--json','name'], capture_output=True, text=True)
     repo_list = [repo['name'] for repo in json.loads(repo_list.stdout)]
