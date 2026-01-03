@@ -14,7 +14,8 @@ LOCAL_CONFIG = {
 }
 
 def get_all_gh_repos():
-    re.findall(r'ilisien-academic(.*?)\\t',str(results.stdout))
+    repo_list = subprocess.run(['gh','repo','list'])
+    re.findall(r'ilisien-academic(.*?)\\t',str(repo_list.stdout))
 
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
