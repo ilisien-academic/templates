@@ -60,12 +60,6 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
 
     return repo_prefix + str(sequential_numbered_repo_number(repo_prefix))
 
-BASE_CONFIG = {
-    'gh_username':'ilisien-academic',
-    'gh_key_name':'github.com-academic',
-    'default_gh_repo_visibility':'private',
-    'naming_standard': fa25_academic_naming,
-}
 
 def create_gh_repo():
     pass
