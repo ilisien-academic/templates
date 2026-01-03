@@ -7,7 +7,7 @@ setup(
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'academic-repo=your_script_name:main',
+            'academic-repo=templates:main',
         ],
     },
 )
