@@ -65,4 +65,5 @@ def create_gh_repo(repo_name,visibility=GH_CONFIG['default_gh_repo_visibility'])
     return subprocess.run(['gh','repo','new',repo_name,visibility],check=True)
 
 def local_git_repo_and_push(course_code,repo_name,semester=LOCAL_CONFIG['current_semester']):
-    
+    base_path = Path(LOCAL_CONFIG['academic_root']) / semester / course_code
+    if not base_path.exists()
