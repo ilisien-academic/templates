@@ -1,8 +1,8 @@
 import os, shutil, subprocess, json
 from pathlib import Path
+from utilities import *
 
-
-def fa25_academic_naming(course_code,assignment_type,semester=sp26):
+def fa25_academic_naming(course_code,assignment_type,semester='sp26'):
     '''
     Naming in the format: "abc123_assignment_type_1"
     
