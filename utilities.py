@@ -8,3 +8,16 @@ def load_semester_config():
 def write_semester_config(config):
     with open('semester_config.json', 'w') as f:
         json.dump(config, f, indent=2)
+
+def yn(prompt,d_yes=True):
+    '''
+    yes or no prompt
+    
+    :param prompt: input prompt
+    :param d_yes: make default yes? (True)
+    '''
+    y = "Y" if d_yes else "y"
+    n = "n" if d_yes else "N"
+
+    response = input(prompt + f"[{y}/{n}]")
+    
