@@ -69,7 +69,7 @@ def setup_template_only_gitignore(repo_path):
     shutil.copytree("templates\\only_gitignore",repo_path)
 
 def setup_template_technical_written_hw(repo_path):
-    JULIA_PACKAGES = ['CairoMakie','DifferentialEquations','Symbolics']
+    JULIA_PACKAGES = ["CairoMakie","DifferentialEquations","Symbolics"]
 
     shutil.copytree("templates\\technical_written_hw",repo_path)
     subprocess.run(['python','-m','venv','env'],cwd=repo_path / 'code', check=True)
