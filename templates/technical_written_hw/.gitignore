@@ -5,8 +5,5 @@
 !.gitignore
 !*.pdf
 
-!code/
-!code/**
-
 !images/
 !images/**
