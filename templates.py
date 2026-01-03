@@ -73,8 +73,9 @@ def setup_template_technical_written_hw(repo_path):
 
     shutil.copytree("templates\\technical_written_hw",repo_path)
     subprocess.run(['python','-m','venv','env'],cwd=repo_path / 'code', check=True)
-    julia_code = f'using Pkg; Pkg.activate("."); Pkg.add({str(JULIA_PACKAGES).replace("'",'"')}); Pkg.precompile()'
+    julia_code = f'using Pkg; Pkg.activate("."); Pkg.add({str(JULIA_PACKAGES).replace("'",'"')})' #; Pkg.precompile()
     subprocess.run(['julia','--project=.','-e',julia_code], cwd=repo_path / 'code', check=True)
+    
 
 def setup_template_mla_essay(repo_path):
     pass
