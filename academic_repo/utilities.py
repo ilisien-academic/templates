@@ -4,12 +4,12 @@ from pathlib import Path
 PACKAGE_DIR = Path(__file__).parent
 
 def load_semester_config():
-    with open('semester_config.json','r') as f:
+    with open(PACKAGE_DIR / 'semester_config.json','r') as f:
         config = json.load(f)
     return config
 
 def write_semester_config(config):
-    with open('semester_config.json', 'w') as f:
+    with open(PACKAGE_DIR / 'semester_config.json', 'w') as f:
         json.dump(config, f, indent=2)
 
 def yn(prompt,d_yes=True):
