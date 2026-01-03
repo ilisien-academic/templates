@@ -1,7 +1,7 @@
 import os, shutil, subprocess
 from pathlib import Path
 
-def fa25_academic_naming(cl,)
+def fa25_academic_naming(course_code,)
 
 CONFIG = {
     'gh_username':'ilisien-academic',
