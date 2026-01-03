@@ -34,7 +34,8 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     else:
         if course_code in semester_config['courses']:
             course_code = semester_config['courses'][course_code]
-        else
+        else:
+            pass # course code already the correct code
 
 
     SMC_ORIGINAL[semester] = semester_config
