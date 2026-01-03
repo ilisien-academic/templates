@@ -13,7 +13,7 @@ LOCAL_CONFIG = {
     'current_semester':'sp26'
 }
 
-def 
+
 
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
