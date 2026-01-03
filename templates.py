@@ -95,4 +95,4 @@ def local_git_repo_and_push(course_code,repo_name,template=setup_template_only_g
 
     subprocess.run(['git', 'init'], cwd=repo_path, check=True)
     subprocess.run(['git', 'add', '.'], cwd=repo_path, check=True)
-    subprocess.run(['git', 'commit', '-m', 'Initial commit'], cwd=repo_path, check=True)
+    subprocess.run(['git', 'commit', '-m', 'init'], cwd=repo_path, check=True)
