@@ -70,5 +70,5 @@ def local_git_repo_and_push(course_code,repo_name,semester=LOCAL_CONFIG['current
         if yn(f"Base path: '{str(base_path)}' doesn't exist; create it?",False):
             base_path.mkdir(parents=True,exist_ok=True)
         else:
-            sys.exit()
+            sys.exit("Base path doesn't exist, was told not to create it.")
 
