@@ -15,7 +15,7 @@ LOCAL_CONFIG = {
 
 def get_all_gh_repos():
     repo_list = subprocess.run(['gh','repo','list'])
-    re.findall(fr'{GH_CONFIG['gh_username']}/(.*?)\\t',str(repo_list.stdout))
+    re.findall(f'{GH_CONFIG['gh_username']}/(.*?)\\t',str(repo_list.stdout))
 
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
