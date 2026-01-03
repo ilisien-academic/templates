@@ -2,6 +2,16 @@ import os, shutil, subprocess, json
 from pathlib import Path
 from utilities import *
 
+GH_CONFIG = {
+    'gh_username':'ilisien-academic',
+    'gh_key_name':'github.com-academic',
+    'default_gh_repo_visibility':'private',
+}
+
+LOCAL_CONFIG = {
+    
+}
+
 def fa25_academic_naming(course_code,assignment_type,semester='sp26'):
     '''
     Naming in the format: "abc123_assignment_type_1"
