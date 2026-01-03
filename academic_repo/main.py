@@ -68,7 +68,7 @@ def create_gh_repo(repo_name,visibility=GH_CONFIG['default_gh_repo_visibility'])
     subprocess.run(['gh','repo','new',repo_name,visibility],check=True)
 
 def setup_template_only_gitignore(repo_path):
-    shutil.copytree("templates\\only_gitignore",repo_path)
+    shutil.copytree(PACKAGE_DIR / "templates" / "only_gitignore",repo_path)
 
 def setup_template_technical_written_hw(repo_path):
     JULIA_PACKAGES = ["CairoMakie","DifferentialEquations","Symbolics"]
