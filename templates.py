@@ -89,13 +89,13 @@ def local_git_repo_and_push(course_code,repo_name,template='empty',semester=LOCA
     repo_path = base_path / repo_name
     if repo_path.exists():
         sys.exit(f"A repo already exists at: '{str(repo_path)}'! Quit so as to not overwrite.")
-    
-        
+
+
     TEMPLATE_LIBRARY[template](repo_path)
 
+    subprocess.run(['git', 'init'], cwd=repo_path, check=True)
     subprocess.run(['git', 'config', 'user.name', GH_CONFIG['gh_username']], cwd=repo_path, check=True)
     subprocess.run(['git', 'config', 'user.email', GH_CONFIG['gh_email']], cwd=repo_path, check=True)
-    subprocess.run(['git', 'init'], cwd=repo_path, check=True)
     subprocess.run(['git', 'add', '.'], cwd=repo_path, check=True)
     subprocess.run(['git', 'commit', '-m', 'init'], cwd=repo_path, check=True)
     
