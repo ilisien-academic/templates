@@ -79,7 +79,7 @@ def setup_template_technical_written_hw(repo_path):
     Pkg.add({JULIA_PACKAGES})
     Pkg.precompile()
     '''
-    subprocess.run(['python','-m','venv','env'],cwd=repo_path / 'code', check=True)
+    subprocess.run(['julia','--project=.','-e',julia_code], cwd=repo_path / 'code', check=True)
 
 def setup_template_mla_essay(repo_path):
     pass
