@@ -91,7 +91,9 @@ def setup_template_technical_written_hw(repo_path):
 
     with open(repo_path / f'{repo_path.name}.tex', "r", encoding="utf-8") as f:
         tex_content = f.read()
-    for 
+
+    for placeholder, value in replacements.items():
+        tex
 
 def setup_template_mla_essay(repo_path):
     pass
