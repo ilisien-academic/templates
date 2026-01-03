@@ -20,7 +20,7 @@ def get_all_gh_repos():
 def sequential_numbered_repo_number(prefix):
     repos = get_all_gh_repos()
     repos_w_prefix = [int(repo.split("_")[-1]) for repo in repos if prefix in repo]
-    return max(repos_w_prefix)
+    return max(repos_w_prefix) + 1
 
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
