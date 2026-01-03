@@ -13,6 +13,8 @@ LOCAL_CONFIG = {
     'current_semester':'sp26'
 }
 
+def get_all_gh_repos()
+
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
     Naming in the format: "abc123_assignment_type_1"
