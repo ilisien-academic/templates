@@ -91,4 +91,4 @@ def local_git_repo_and_push(course_code,repo_name,template=setup_template_only_g
     else:
         repo_path.mkdir(parents=True,exist_ok=False)
     
-    setup_template_only_gitignore
+    template(repo_path)
