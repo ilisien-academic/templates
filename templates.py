@@ -13,7 +13,11 @@ LOCAL_CONFIG = {
     'current_semester':'sp26'
 }
 
-
+def yn(prompt,default):
+    d = default
+    
+    response = input(prompt + f"[{}/{}]")
+    
 
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
@@ -26,7 +30,7 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     semester_config = load_semester_config()[semester]
 
 
-    if course_code not in [item for pair in semester_config['courses'] for item in pair]:
+    if course_code not in [item for pair in semester_config['courses'].items() for item in pair]:
         input("Could not find chosen course code in config; are you sure this is the right course? [Y/n]")
     
 
