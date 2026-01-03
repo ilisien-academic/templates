@@ -22,6 +22,9 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     :param semester: semester string to draw defaults from; current default is spring 2026
     '''
     semester_config = load_semester_config()[semester]
+
+    if (course_code not in semester_config["courses"]):
+        input("Could not find chosen course code")
     
 
 BASE_CONFIG = {
