@@ -132,7 +132,23 @@ def local_git_repo_and_push(course_code,repo_name,template='empty',semester=LOCA
     subprocess.run(['git', 'branch', '-M', 'main'], cwd=repo_path, check=True)
     subprocess.run(['git', 'push', '-u', 'origin', 'main'], cwd=repo_path, check=True)
 
-if __name__ == "__main__":
-    course_code, repo_name = fa25_academic_naming('math','whw')
+def main():
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Create academic GitHub repos')
+    parser.add_argument('course', help='Course code (e.g., "math" or "la_197")')
+    parser.add_argument('assignment_type', help='Assignment type (e.g., "whw")')
+    parser.add_argument('--template', default='tech_informal', 
+                       choices=list(TEMPLATE_LIBRARY.keys()),
+                       help='Template to use')
+    parser.add_argument('--semester', default=LOCAL_CONFIG['current_semester'], 
+                       help='Semester code')
+    
+    args = parser.parse_args()
+    
+    course_code, repo_name = fa25_academic_naming(args.course, args.assignment_type, args.semester)
     create_gh_repo(repo_name)
-    local_git_repo_and_push(course_code, repo_name,template="tech_informal")
+    local_git_repo_and_push(course_code, repo_name, template=args.template, semester=args.semester)
+
+if __name__ == "__main__":
+    main()
