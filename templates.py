@@ -24,12 +24,12 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     '''
     semester_config = load_semester_config()[semester]
 
-
     if course_code not in [item for pair in semester_config['courses'].items() for item in pair]:
         if not yn("Could not find chosen course code in config; are you sure this is the right course?",False):
             sys.exit("Exited script, not sure about course code.")
         else:
-            yn("Add it to semester config?")
+            if yn("Add it to semester config?"):
+                semester_config["courses"]
     
 
 BASE_CONFIG = {
