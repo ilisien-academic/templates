@@ -34,12 +34,15 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     else:
         if course_code in semester_config['courses']:
             course_code = semester_config['courses'][course_code]
-        else:
-            pass # course code already the correct code
-
+    
     if assignment_type not in semester_config["assignment_types"]:
         if not yn("Could not find chosen assignment type in config; are you sure this is the right type?",False):
-            sys.exit("Exited script, not sure about course code.")
+            sys.exit("Exited script, not sure about assignment type.")
+        else:
+            if yn("Add it to semester config?"):
+                semester_config["assignment_types"].append(assignment_type)
+    
+    
 
 
     SMC_ORIGINAL[semester] = semester_config
