@@ -14,8 +14,8 @@ LOCAL_CONFIG = {
 }
 
 def get_all_gh_repos():
-    repo_list = subprocess.run(['gh','repo','list'], capture_output=True)
-    return re.findall(rf'{GH_CONFIG['gh_username']}/(.*?)\\t',str(repo_list.stdout))
+    repo_list = str(subprocess.run(['gh','repo','list'], capture_output=True).stdout)
+    return re.findall(rf'{GH_CONFIG['gh_username']}/(.*?)\\t',repo_list)
 
 def sequential_numbered_repo_number(prefix):
     repos = get_all_gh_repos()
@@ -61,4 +61,4 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     return repo_prefix + str(sequential_numbered_repo_number(repo_prefix))
 
 def create_gh_repo(repo_name):
-    output = subprocess.run()
+    output = subprocess.run([])
