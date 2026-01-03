@@ -12,7 +12,6 @@ LOCAL_CONFIG = {
     'academic_root':'C:\\Users\\ilisien\\Desktop\\academic',
     'current_semester':'sp26'
 }
-    
 
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
@@ -42,7 +41,7 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
             if yn("Add it to semester config?"):
                 semester_config["assignment_types"].append(assignment_type)
     
-    
+
 
 
     SMC_ORIGINAL[semester] = semester_config
