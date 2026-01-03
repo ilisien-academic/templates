@@ -64,7 +64,7 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
 def create_gh_repo(repo_name,visibility=GH_CONFIG['default_gh_repo_visibility']):
     return subprocess.run(['gh','repo','new',repo_name,visibility],check=True)
 
-
+def setup_template_only_gitignore(repo_path)
 
 def local_git_repo_and_push(course_code,repo_name,template="only_gitignore",semester=LOCAL_CONFIG['current_semester']):
     base_path = Path(LOCAL_CONFIG['academic_root']) / semester / course_code
