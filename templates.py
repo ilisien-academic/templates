@@ -1,4 +1,4 @@
-import os, shutil, subprocess, json, sys
+import os, shutil, subprocess, json, sys, re
 from pathlib import Path
 from utilities import *
 
@@ -13,7 +13,8 @@ LOCAL_CONFIG = {
     'current_semester':'sp26'
 }
 
-def get_all_gh_repos()
+def get_all_gh_repos():
+    re.findall(r'ilisien-academic(.*?)\\t',str(results.stdout))
 
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
