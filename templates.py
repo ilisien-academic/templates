@@ -86,6 +86,7 @@ def setup_template_mla_essay(repo_path):
 
 TEMPLATE_LIBRARY = {
     'empty':setup_template_only_gitignore,
+    'tech_informal':setup_template_technical_written_hw,
 }
 
 def local_git_repo_and_push(course_code,repo_name,template='empty',semester=LOCAL_CONFIG['current_semester']):
@@ -114,6 +115,6 @@ def local_git_repo_and_push(course_code,repo_name,template='empty',semester=LOCA
     subprocess.run(['git', 'push', '-u', 'origin', 'main'], cwd=repo_path, check=True)
 
 if __name__ == "__main__":
-    course_code, repo_name = fa25_academic_naming('math','whw','fa25')
+    course_code, repo_name = fa25_academic_naming('math','whw')
     create_gh_repo(repo_name)
-    local_git_repo_and_push(course_code, repo_name, semester='fa25')
+    local_git_repo_and_push(course_code, repo_name,template="tech_informal")
