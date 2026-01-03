@@ -73,7 +73,7 @@ def setup_template_only_gitignore(repo_path):
 def setup_template_technical_written_hw(repo_path):
     JULIA_PACKAGES = ["CairoMakie","DifferentialEquations","Symbolics"]
 
-    shutil.copytree("templates\\technical_written_hw",repo_path)
+    shutil.copytree(PACKAGE_DIR / "templates" / "technical_written_hw",repo_path)
     subprocess.run(['python','-m','venv','env'],cwd=repo_path / 'code', check=True)
     julia_code = f'using Pkg; Pkg.activate("."); Pkg.add({str(JULIA_PACKAGES).replace("'",'"')})' #; Pkg.precompile()
     subprocess.run(['julia','--project=.','-e',julia_code], cwd=repo_path / 'code', check=True)
