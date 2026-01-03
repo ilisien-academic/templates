@@ -83,6 +83,12 @@ def setup_template_technical_written_hw(repo_path):
         short_title = long_title
     due_date = input("When is this assignment due? (due date): ")
 
+    replacements = {
+        "<LONG TITLE>": long_title,
+        "<SHORT TITLE>": short_title,
+        "<DUE DATE>": due_date
+    }
+
     with open(repo_path / f'{repo_path.name}.tex', "r", encoding="utf-8") as f:
         tex_content = f.read()
     for 
