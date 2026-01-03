@@ -1,8 +1,8 @@
 {
   "gitdoc.enabled": true,
-  "gitdoc.autoPushDelay": 30000,
+  "gitdoc.autoPushDelay": 60000,
   "gitdoc.autoPush": "afterDelay",
-  "gitdoc.autoCommitDelay": 10000,
+  "gitdoc.autoCommitDelay": 30000,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000
 }
