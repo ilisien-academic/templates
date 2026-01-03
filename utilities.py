@@ -23,7 +23,11 @@ def yn(prompt,d_yes=True):
     yes = (response in ["y","yes"]) or (d_yes and (response == ""))
 
     if yes:
-        return yes
+        return True
     else:
         no = (response in ["n","no"]) or (not d_yes and (response == ""))
-        if 
+        if no:
+            return False
+        else: 
+            print("Answer not understood.")
+            return yn(prompt,d_yes)
