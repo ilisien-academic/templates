@@ -23,8 +23,8 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     '''
     semester_config = load_semester_config()[semester]
 
-    
-    if (course_code not in semester_config["courses"]):
+
+    if course_code not in [item for pair in semester_config['courses'] for item in pair]:
         input("Could not find chosen course code")
     
 
