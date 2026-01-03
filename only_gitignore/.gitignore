@@ -1,0 +1,12 @@
+*
+
+!*.tex
+!*.bib
+!.gitignore
+!*.pdf
+
+!code/
+!code/**
+
+!images/
+!images/**
