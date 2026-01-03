@@ -7,7 +7,8 @@ def fa25_academic_naming(course_code,assignment_type,semester='sp26'):
     Naming in the format: "abc123_assignment_type_1"
     
     :param course_code: course code with underscore, for example "la_197" or reference to semester config, for example "la"
-    :param assignment_type: 
+    :param assignment_type: type of assignment to create; warning generated if not in config
+    
     '''
 
 BASE_CONFIG = {
