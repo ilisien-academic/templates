@@ -103,3 +103,6 @@ def local_git_repo_and_push(course_code,repo_name,template='empty',semester=LOCA
     subprocess.run(['git', 'remote', 'add', 'origin', f'git@{GH_CONFIG["gh_key_name"]}:{GH_CONFIG["gh_username"]}/{repo_name}.git'], cwd=repo_path, check=True)
     subprocess.run(['git', 'branch', '-M', 'main'], cwd=repo_path, check=True)
     subprocess.run(['git', 'push', '-u', 'origin', 'main'], cwd=repo_path, check=True)
+
+if __name__ == "__main__":
+    
