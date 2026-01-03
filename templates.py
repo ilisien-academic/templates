@@ -14,8 +14,9 @@ LOCAL_CONFIG = {
 }
 
 def get_all_gh_repos():
-    repo_list = str(subprocess.run(['gh','repo','list'], capture_output=True).stdout)
-    return re.findall(rf'{GH_CONFIG['gh_username']}/(.*?)\\t',repo_list)
+    repo_list = subprocess.run(['gh','repo','list','--json','name'], capture_output=True, text=True)
+    repo_list = [repo['name'] for repo in json.loads(repo_list.stdout)]
+    return repo_list
 
 def sequential_numbered_repo_number(prefix):
     repos = get_all_gh_repos()
