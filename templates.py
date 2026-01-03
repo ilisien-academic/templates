@@ -53,8 +53,9 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     SMC_ORIGINAL[semester] = semester_config
     write_semester_config(SMC_ORIGINAL)
 
-    
+    repo_prefix = course_code.replace("_","") + "_" + assignment_type.replace(" ","_") + "_"
 
+    
     return course_code.replace("_","") + "_" + 
     
 
