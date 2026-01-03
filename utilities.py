@@ -20,4 +20,5 @@ def yn(prompt,d_yes=True):
     n = "n" if d_yes else "N"
 
     response = input(prompt + f"[{y}/{n}]")
-    
+    yes = response.lower() in ["y","yes"]
+    return d_yes and 
