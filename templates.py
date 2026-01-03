@@ -40,12 +40,11 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
         else:
             if yn("Add it to semester config?"):
                 semester_config["assignment_types"].append(assignment_type)
-    
-
-
 
     SMC_ORIGINAL[semester] = semester_config
     write_semester_config(SMC_ORIGINAL)
+
+    return course_code.replace("_","") + "_" + 
     
 
 BASE_CONFIG = {
