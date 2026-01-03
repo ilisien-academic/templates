@@ -1,6 +1,7 @@
 import os, shutil, subprocess, json
 from pathlib import Path
 
+
 def fa25_academic_naming(course_code,assignment_type,semester=sp26):
     '''
     Naming in the format: "abc123_assignment_type_1"
