@@ -1,4 +1,7 @@
 import json
+from pathlib import Path
+
+PACKAGE_DIR = Path(__file__).parent
 
 def load_semester_config():
     with open('semester_config.json','r') as f:
