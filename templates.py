@@ -9,10 +9,11 @@ GH_CONFIG = {
 }
 
 LOCAL_CONFIG = {
-    'academic_root':'C:\\Users\\ilisien\\Desktop\\academic'
+    'academic_root':'C:\\Users\\ilisien\\Desktop\\academic',
+    'current_semester':'sp26'
 }
 
-def fa25_academic_naming(course_code,assignment_type,semester='sp26'):
+def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
     Naming in the format: "abc123_assignment_type_1"
     
