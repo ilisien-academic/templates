@@ -13,6 +13,8 @@ LOCAL_CONFIG = {
     'current_semester':'sp26'
 }
 
+def 
+
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
     Naming in the format: "abc123_assignment_type_1"
@@ -25,7 +27,7 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
 
 
     if course_code not in [item for pair in semester_config['courses'] for item in pair]:
-        input("Could not find chosen course code")
+        input("Could not find chosen course code in config; are you sure this is the right course? [Y/n]")
     
 
 BASE_CONFIG = {
