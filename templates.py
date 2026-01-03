@@ -70,7 +70,7 @@ def setup_template_only_gitignore(repo_path):
 
 def setup_template_technical_written_hw(repo_path):
     PYTHON_VENV_DIR = 'env'
-    
+    JULIA_PACKAGES = ['CairoMakie','DifferentialEquations','Symbolics']
 
     shutil.copytree("templates\\technical_written_hw",repo_path)
 
