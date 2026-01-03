@@ -17,7 +17,11 @@ def get_all_gh_repos():
     repo_list = subprocess.run(['gh','repo','list'])
     return re.findall(rf'{GH_CONFIG['gh_username']}/(.*?)\\t',str(repo_list.stdout))
 
-def starting_number()
+def sequential_numbered_repo_number(prefix):
+    repos = get_all_gh_repos()
+    repos_w_prefix = [repo for repo in repos if prefix in repo]
+    for repo in all_repos:
+        if prefix 
 
 def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['current_semester']):
     '''
