@@ -62,5 +62,6 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     return repo_prefix + str(sequential_numbered_repo_number(repo_prefix))
 
 def create_gh_repo(repo_name,visibility=GH_CONFIG['default_gh_repo_visibility']):
-    return subprocess.run(['gh','repo','new',repo_name,visibility],capture_output=True,text=True).stdout
+    return subprocess.run(['gh','repo','new',repo_name,visibility],check=True)
+
 
