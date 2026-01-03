@@ -75,10 +75,10 @@ def setup_template_mla_essay(repo_path):
     pass
 
 TEMPLATE_LIBRARY = {
-
+    'empty':setup_template_only_gitignore,
 }
 
-def local_git_repo_and_push(course_code,repo_name,template=setup_template_only_gitignore,semester=LOCAL_CONFIG['current_semester']):
+def local_git_repo_and_push(course_code,repo_name,template='empty',semester=LOCAL_CONFIG['current_semester']):
     base_path = Path(LOCAL_CONFIG['academic_root']) / semester / course_code
     if not base_path.exists():
         if yn(f"Base path: '{str(base_path)}' doesn't exist; create it?",False):
@@ -92,7 +92,7 @@ def local_git_repo_and_push(course_code,repo_name,template=setup_template_only_g
     else:
         repo_path.mkdir(parents=True,exist_ok=False)
     
-    template(repo_path)
+    TEMPLATE_LIBRARY[template](repo_path)
 
     subprocess.run(['git', 'config', 'user.name', GH_CONFIG['gh_username']], cwd=repo_path, check=True)
     subprocess.run(['git', 'config', 'user.email', GH_CONFIG['gh_email']], cwd=repo_path, check=True)
