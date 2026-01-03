@@ -22,7 +22,8 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     :param assignment_type: type of assignment to create; warning generated if not in config
     :param semester: semester string to draw defaults from; current default is spring 2026
     '''
-    semester_config = load_semester_config()[semester]
+    SMC_ORIGINAL = load_semester_config()
+    semester_config = SMC_ORIGINAL[semester]
 
     if course_code not in [item for pair in semester_config['courses'].items() for item in pair]:
         if not yn("Could not find chosen course code in config; are you sure this is the right course?",False):
@@ -31,7 +32,8 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
             if ("_" in course_code) and yn("Add it to semester config?"):
                 semester_config["courses"][course_code.split("_")[0]] = course_code
     
-    write_semester_config(load_semester_config()[semester])
+    SMC_ORIGINAL[semester] = semester_config
+    write_semester_config(SMC_ORIGINAL)
     
 
 BASE_CONFIG = {
