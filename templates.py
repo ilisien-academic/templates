@@ -1,25 +1,20 @@
 import os, shutil, subprocess
 from pathlib import Path
-
-sp26 = {
-    "courses":{
-        'phys':'phys_212h'
-    }
-}
+from semester_config import sp26
 
 def fa25_academic_naming(course_code,assignment_type,semester=sp26):
     '''
     Naming in the format: "abc123_assignment_type_1"
     
-    :param course_code: string course code, for example "
-    :param assignment_type: Description
+    :param course_code: course code with underscore, for example "la_197" or reference to semester, for example "la"
+    :param assignment_type: 
     '''
 
-CONFIG = {
+BASE_CONFIG = {
     'gh_username':'ilisien-academic',
     'gh_key_name':'github.com-academic',
     'default_gh_repo_visibility':'private',
-    'repo_naming_standard':
+    'repo_naming_standard': fa25_academic_naming,
 }
 
 def create_gh_repo()
