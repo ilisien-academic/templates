@@ -9,7 +9,7 @@ GH_CONFIG = {
 }
 
 LOCAL_CONFIG = {
-    
+    'academic_root':
 }
 
 def fa25_academic_naming(course_code,assignment_type,semester='sp26'):
