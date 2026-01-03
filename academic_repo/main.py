@@ -1,6 +1,6 @@
 import os, shutil, subprocess, json, sys, re
 from pathlib import Path
-from utilities import *
+from .utilities import *
 
 PACKAGE_DIR = Path(__file__).parent
 
