@@ -65,7 +65,7 @@ def create_gh_repo(repo_name,visibility=GH_CONFIG['default_gh_repo_visibility'])
     return subprocess.run(['gh','repo','new',repo_name,visibility],check=True)
 
 def setup_template_only_gitignore(repo_path):
-    shutil.copytree("only_gitignore")
+    shutil.copytree("templates\\only_gitignore",repo_path)
 
 def setup_template_technical_written_hw(repo_path):
     pass
@@ -91,4 +91,4 @@ def local_git_repo_and_push(course_code,repo_name,template=setup_template_only_g
     else:
         repo_path.mkdir(parents=True,exist_ok=False)
     
-    shutil.copytree('only_gitignore')
+    setup_template_only_gitignore
