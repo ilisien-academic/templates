@@ -24,4 +24,6 @@ def yn(prompt,d_yes=True):
 
     if d_yes and yes:
         return d_yes and yes
-    return d_yes and yes
+    else:
+        no = (response in ["n","no"]) or (not d_yes and (response == ""))
+        if 
