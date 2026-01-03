@@ -72,5 +72,8 @@ def local_git_repo_and_push(course_code,repo_name,semester=LOCAL_CONFIG['current
         else:
             sys.exit("Base path doesn't exist, was told not to create it.")
 
-    if (base_path / repo_name).exists():
-        sys.exit("")
+    repo_path = base_path / repo_name
+    if repo_path.exists():
+        sys.exit(f"A repo already exists at: '{str(repo_path)}'! Quit so as to not overwrite.")
+    else:
+        
