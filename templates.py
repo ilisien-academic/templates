@@ -90,13 +90,14 @@ def setup_template_technical_written_hw(repo_path):
         "<DUE DATE>": due_date
     }
 
-    with open(repo_path / f'{repo_path.name}.tex', "r", encoding="utf-8") as f:
+    with open(new_tex_path, "r", encoding="utf-8") as f:
         tex_content = f.read()
 
     for placeholder, value in replacements.items():
         tex_content = tex_content.replace(placeholder,value)
     
-    with open("")
+    with open(new_tex_path,'w',encoding="utf-8") as f:
+        f.write(tex_content)
 
 def setup_template_mla_essay(repo_path):
     pass
