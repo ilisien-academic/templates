@@ -76,7 +76,7 @@ def setup_template_technical_written_hw(repo_path):
     julia_code = f'using Pkg; Pkg.activate("."); Pkg.add({str(JULIA_PACKAGES).replace("'",'"')})' #; Pkg.precompile()
     subprocess.run(['julia','--project=.','-e',julia_code], cwd=repo_path / 'code', check=True)
     new_tex_path = repo_path / f'{repo_path.name}.tex'
-    (repo_path / 'REPO_NAME_HERE.tex').rename(repo_path / f'{repo_path.name}.tex')
+    (repo_path / 'REPO_NAME_HERE.tex').rename(new_tex_path)
 
     long_title = input("What should I title the .tex document? (title): ")
     short_title = input("What is a good short title for this doc? (leave blank for ^): ")
