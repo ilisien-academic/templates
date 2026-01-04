@@ -110,7 +110,7 @@ TEMPLATE_LIBRARY = {
 }
 
 def local_git_repo_and_push(course_code,repo_name,template='empty',semester=LOCAL_CONFIG['current_semester']):
-    base_path = Path(LOCAL_CONFIG['academic_root']) / semester / course_code
+    base_path = Path(LOCAL_CONFIG['academic_root']) / semester / course_code / 'assignments'
     if not base_path.exists():
         if yn(f"Base path: '{str(base_path)}' doesn't exist; create it?",False):
             base_path.mkdir(parents=True,exist_ok=True)
