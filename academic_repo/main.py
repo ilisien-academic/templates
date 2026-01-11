@@ -74,11 +74,6 @@ def setup_template_technical_written_hw(repo_path):
     JULIA_PACKAGES = ["CairoMakie","DifferentialEquations","Symbolics"]
 
     shutil.copytree(PACKAGE_DIR / "templates" / "technical_written_hw",repo_path)
-    subprocess.run(['python','-m','venv','env'],cwd=repo_path / 'code', check=True)
-    julia_code = f'using Pkg; Pkg.activate("."); Pkg.add({str(JULIA_PACKAGES).replace("'",'"')})' #; Pkg.precompile()
-    subprocess.run(['julia','--project=.','-e',julia_code], cwd=repo_path / 'code', check=True)
-    new_tex_path = repo_path / f'{repo_path.name}.tex'
-    (repo_path / 'REPO_NAME_HERE.tex').rename(new_tex_path)
 
     long_title = input("What should I title the .tex document? (title): ")
     short_title = input("What is a good short title for this doc? (leave blank for ^): ")
@@ -100,6 +95,12 @@ def setup_template_technical_written_hw(repo_path):
     
     with open(new_tex_path,'w',encoding="utf-8") as f:
         f.write(tex_content)
+
+    subprocess.run(['python','-m','venv','env'],cwd=repo_path / 'code', check=True)
+    julia_code = f'using Pkg; Pkg.activate("."); Pkg.add({str(JULIA_PACKAGES).replace("'",'"')})' #; Pkg.precompile()
+    subprocess.run(['julia','--project=.','-e',julia_code], cwd=repo_path / 'code', check=True)
+    new_tex_path = repo_path / f'{repo_path.name}.tex'
+    (repo_path / 'REPO_NAME_HERE.tex').rename(new_tex_path)
 
 def setup_template_mla_essay(repo_path):
     pass
