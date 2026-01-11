@@ -25,7 +25,8 @@
     },
     "assignment_types": [
       "whw",
-      "independent_practice"
+      "independent_practice",
+      "pset"
     ]
   }
 }
