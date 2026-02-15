@@ -32,6 +32,13 @@
 \newcommand{\noindline}{\hspace*{-\leftmargini}\noindent\rule{\textwidth}{0.4pt}}
 \newcommand{\fullbarline}{\noindent\rule{\textwidth}{0.4pt}}
 
+\newcommand{\squigglyline}{%
+  \par\vspace{-0.3\baselineskip}\noindent%
+  {\centering
+  \raisebox{-.5ex}{\tikz \draw[decorate,decoration={snake,amplitude=0.5mm,segment length=5mm}] (0,0) -- (0.5\textwidth,0);}%
+  \par\vspace{-0.3\baselineskip}}%
+}
+
 \begin{document}
 
 \maketitle
