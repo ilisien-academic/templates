@@ -67,7 +67,7 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     repo_prefix = course_code.replace("_","") + "_" + assignment_type.replace(" ","_") + "_"
 
     if (sequential_numbered_repo_number(repo_prefix) == 1 and not wants_number):
-        return course_code, repo_prefix
+        return course_code, repo_prefix[:-1]
     else:
         return course_code, repo_prefix + str(sequential_numbered_repo_number(repo_prefix))
 
