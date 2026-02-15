@@ -58,6 +58,7 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
             if yn("Add it to semester config?"):
                 semester_config["assignment_types"].append(assignment_type)
             else:
+                if yn("")
                 wants_number = False
 
     SMC_ORIGINAL[semester] = semester_config
