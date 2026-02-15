@@ -39,6 +39,7 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
     '''
     SMC_ORIGINAL = load_semester_config()
     semester_config = SMC_ORIGINAL[semester]
+    wants_number = True
 
     if course_code not in [item for pair in semester_config['courses'].items() for item in pair]:
         if not yn("Could not find chosen course code in config; are you sure this is the right course?",False):
@@ -57,7 +58,7 @@ def fa25_academic_naming(course_code,assignment_type,semester=LOCAL_CONFIG['curr
             if yn("Add it to semester config?"):
                 semester_config["assignment_types"].append(assignment_type)
             else:
-                
+                wants_number = False
 
     SMC_ORIGINAL[semester] = semester_config
     write_semester_config(SMC_ORIGINAL)
