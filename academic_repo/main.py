@@ -13,7 +13,7 @@ GH_CONFIG = {
 
 LOCAL_CONFIG = {
     'academic_root':'C:\\Users\\ilisien\\Desktop\\academic',
-    'current_semester':'sp26'
+    'current_semester':'fa26'
 }
 
 def get_all_gh_repos():
