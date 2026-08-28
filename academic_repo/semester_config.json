@@ -40,14 +40,15 @@
       "438": "che_438",
       "231": "engl_231",
       "442": "bmb_442",
-      "200": "plant_200",
+      "200": "plant_200"
     },
     "assignment_types": [
       "whw",
       "independent_practice",
       "pset",
       "class_exercises",
-      "notes"
+      "notes",
+      "discussion_post"
     ]
   }
 }
